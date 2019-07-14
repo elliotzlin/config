@@ -1,0 +1,8 @@
+# This should be installed in ~/.config/flake8
+
+[flake8]
+
+max-line-length = 100
+
+# Be careful: setting this overrides a non-empty default.
+#ignore = E121,E123,E126,E226,E24,E704,W503,W504

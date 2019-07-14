@@ -1,0 +1,7 @@
+[user]
+	name = Elliot Z. Lin
+	email= elliotlin@rocketmail.com
+[core]
+	editor = /usr/bin/vim
+[color]
+	ui = true
