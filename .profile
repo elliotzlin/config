@@ -24,3 +24,6 @@ fi
 # Golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# Local ruby gems
+export PATH=$PATH:~/.gem/ruby/2.3.0/bin
