@@ -47,7 +47,7 @@ GIT_PS1_SHOWSTASHSTATE="yes"
 GIT_PS1_SHOWUNTRACKEDFILES="yes"
 
 # Link version controlled dotfiles if they exist
-CONFIG_DOTFILES=".bash_profile .profile .bashrc .bash_aliases .vimrc .vim/colors/deus.vim .gitconfig .ssh/config .tmux.conf .config/flake8 .pystartup"
+CONFIG_DOTFILES=".bash_profile .profile .bashrc .bash_aliases .emacs .vimrc .vim/colors/deus.vim .gitconfig .ssh/config .tmux.conf .config/flake8 .pystartup"
 CONFIG_DOTFILES_ROOT="$HOME/git/config"
 (
     for dotfile in $CONFIG_DOTFILES; do

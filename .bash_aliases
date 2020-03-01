@@ -11,6 +11,7 @@ alias grep='grep --color=auto'
 # Personal preferences
 alias sb='source ~/.bash_profile'
 alias ap='ansible-playbook'
+alias e='emacs'
 
 # Git
 function gclean {

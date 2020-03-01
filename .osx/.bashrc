@@ -47,7 +47,7 @@ function mkdir_link {
 ) & disown
 
 # Link version controlled dotfiles if they exist
-CONFIG_DOTFILES=".bash_profile .profile .bash_aliases .vimrc .vim/colors/deus.vim .gitconfig .ssh/config .config/flake8 .ansible.cfg .pystartup"
+CONFIG_DOTFILES=".bash_profile .profile .bash_aliases .emacs .vimrc .vim/colors/deus.vim .gitconfig .ssh/config .config/flake8 .ansible.cfg .pystartup"
 CONFIG_DOTFILES_ROOT="$HOME/git/config"
 (
     for dotfile in $CONFIG_DOTFILES; do
