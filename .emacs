@@ -3,6 +3,8 @@
 ;;; Commentary:
 ;; This comment is to satisfy flycheck
 
+;;; Code:
+
 ;; http://stackoverflow.com/questions/15390178/emacs-and-symbolic-links
 (setq vc-follow-symlinks nil)
 
