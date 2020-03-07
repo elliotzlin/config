@@ -4,15 +4,25 @@
 # ln -sf ~/git/config/.osx/.bashrc ~/.bashrc
 
 PS1="\[\033[01;31m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]> " # host in red, dir in blue
-PROMPT_COMMAND='history -a;'
 shopt -s checkwinsize
-shopt -s histappend
 
+# http://unix.stackexchange.com/a/18443/27433
+shopt -s histappend
+PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
 # OSX doesn't seem to like size = -1
 HISTCONTROL=ignoreboth
 HISTSIZE=9999999
 HISTFILESIZE=9999999
 HISTTIMEFORMAT="%Y/%m/%d %T "
+
+# https://github.com/kaihendry/dotfiles
+test -d ~/.bash_history || mkdir ~/.bash_history
+HISTFILE=~/.bash_history/$(date +%Y-%m)
+
+# Search through all my bash history
+h() {
+    grep -a "$@" ~/.bash_history/*
+}
 
 # Homebrew shell completion
 # https://docs.brew.sh/Shell-Completion
@@ -83,7 +93,7 @@ alias ls='ls -G'                # OSX doesn't support dircolors or --color=auto
 (curl -sfL https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker > `brew --prefix`/etc/bash_completion.d/docker || echo curl failed for bash completion) & disown
 
 # Git prompt configs
-PROMPT_COMMAND='history -a; __git_ps1 "\[\033[01;31m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" "> ";' # FQDN
+PROMPT_COMMAND="$PROMPT_COMMAND"' __git_ps1 "\[\033[01;31m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" "> ";' # FQDN
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS="yes"
 GIT_PS1_SHOWDIRTYSTATE="yes"

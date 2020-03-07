@@ -25,6 +25,11 @@
 ;; IDE for Python
 (elpy-enable)
 
+;; Enforce python3
+(setq elpy-rpc-python-command "python3")
+(setq python-shell--interpreter "python3"
+      python-shell-interpreter-args "-i")
+
 ;; Instant syntax checking; better than flymake
 (require 'flycheck)
 (global-flycheck-mode)
