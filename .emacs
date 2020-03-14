@@ -51,7 +51,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4) ; the default is 8, but that looks too wide
 
-;; Set default fill-column to 80 to fill paragraphs to 80 columns.
+;; Fill paragraphs to 80 columns.
 ;; See https://www.emacswiki.org/emacs/EightyColumnRule
 (setq-default fill-column 80)
 
