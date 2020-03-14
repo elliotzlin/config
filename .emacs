@@ -51,6 +51,10 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4) ; the default is 8, but that looks too wide
 
+;; Set default fill-column to 80 to fill paragraphs to 80 columns.
+;; See https://www.emacswiki.org/emacs/EightyColumnRule
+(setq-default fill-column 80)
+
 ;; Use certain modes depending on first line or filename
 (add-to-list 'magic-mode-alist '("---" . yaml-mode))
 (add-to-list 'auto-mode-alist '("Dockerfile" . sh-mode))
@@ -64,6 +68,10 @@
 (global-linum-mode t)
 (setq linum-format "%4d \u2502")
 (setq linum-disabled-modes-list '(eshell-mode wl-summary-mode compilation-mode shell-mode))
+
+;; Show and delete useless whitespace, always
+(setq-default show-trailing-whitespace t)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Hide menu bar
 (menu-bar-mode -1)
