@@ -13,6 +13,11 @@ alias sb='source ~/.bash_profile'
 alias ap='ansible-playbook'
 alias e='emacs'
 
+# Search through all my bash history
+h() {
+    grep -a "$@" ~/.bash_history/*
+}
+
 # Git
 function gclean {
     git branch --merged | grep -v "\*" | grep -v " master$" | xargs -n 1 git branch -d

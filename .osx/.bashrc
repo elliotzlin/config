@@ -19,11 +19,6 @@ HISTTIMEFORMAT="%Y/%m/%d %T "
 test -d ~/.bash_history || mkdir ~/.bash_history
 HISTFILE=~/.bash_history/$(date +%Y-%m)
 
-# Search through all my bash history
-h() {
-    grep -a "$@" ~/.bash_history/*
-}
-
 # Homebrew shell completion
 # https://docs.brew.sh/Shell-Completion
 if type brew &>/dev/null; then
