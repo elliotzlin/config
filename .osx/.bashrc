@@ -8,7 +8,7 @@ shopt -s checkwinsize
 
 # http://unix.stackexchange.com/a/18443/27433
 shopt -s histappend
-PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+PROMPT_COMMAND='history -a; history -n;'
 # OSX doesn't seem to like size = -1
 HISTCONTROL=ignoreboth
 HISTSIZE=9999999
@@ -88,7 +88,7 @@ alias ls='ls -G'                # OSX doesn't support dircolors or --color=auto
 (curl -sfL https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker > `brew --prefix`/etc/bash_completion.d/docker || echo curl failed for bash completion) & disown
 
 # Git prompt configs
-PROMPT_COMMAND="$PROMPT_COMMAND"' __git_ps1 "\[\033[01;31m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" "> ";' # FQDN
+PROMPT_COMMAND=${PROMPT_COMMAND}' __git_ps1 "\[\033[01;31m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" "> ";' # FQDN
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS="yes"
 GIT_PS1_SHOWDIRTYSTATE="yes"
