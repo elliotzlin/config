@@ -17,7 +17,7 @@ export VISUAL=emacs
 export EDITOR="$VISUAL"
 
 # Pretty colors
-if [ "$TERM" == "xterm" ] ; then
+if [ "$TERM" = "xterm" ] ; then
   export TERM=xterm-256color
 fi
 

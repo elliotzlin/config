@@ -1,2 +1,3 @@
 # config
-Contains my dotfiles
+
+Contains my dotfiles. The code should be self-documenting. :poop:
